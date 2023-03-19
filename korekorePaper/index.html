@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KoreSheet</title>
+
+    <link rel ="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <div class="header">
+        <p>コレコレ相談チートシート</p>
+        
+    </div>
+    
+<div class="double">
+    <div class="caution">
+         <p><span class="under">相談前の確認</span></p>
+
+         <ul>
+            <li>その話は直接自分に関係のある話かどうか<br>（暴露の場合は別）</li>
+            <li>証拠が1つでもあるかどうか</li>
+            <li>回線は良好かどうか</li>
+           
+         </ul>
+    </div>
+</div>
+
+    <div class="double">
+    <div class="one">
+    <h1>内容入力</h1>
+    <p class="message">相談内容をまとめよう</p>
+
+    <div class="in">
+        <p>お名前</p>
+        <label><input type="text" id="name"></label>
+        <form name="form1">
+        <p>性別</p>
+            <label><input type="radio" class="radio" value="男性" name="radio">男性</label>
+            <label><input type="radio" class="radio" value="女性" name="radio">女性</label>
+        </form>
+        <p>年齢</p>
+        <label><input type="number" id="age"></label>
+        <p>関係人数</p>
+        <label><input type="number" id="member"></label>
+        <p>コレコレにして欲しいこと</p>
+        <label><textarea type="text" id="want" rows="2"></textarea></label>
+        <p>詳しい説明</p>
+        <label><textarea type="text" id="explain" rows="20"></textarea></label>
+       
+        <p>補足</p>
+        <label><textarea type="text" id="hosoku" rows="4"></textarea></label>
+
+        <button class="done" type="button" onclick="clickBtn1()">完了</button>
+    </div>
+</div>
+    <script>
+        function clickBtn1() {
+          const t1 = document.getElementById("name").value;
+          document.getElementById("span1").textContent = t1;
+
+          const t2 = document.getElementById("age").value;
+          document.getElementById("span2").textContent = t2;
+
+          const t3 = document.getElementById("member").value;
+          document.getElementById("span3").textContent = t3;
+
+          const t4 = document.getElementById("explain").value;
+          document.getElementById("span4").textContent = t4;
+
+          const t5 = document.getElementById("hosoku").value;
+          document.getElementById("span5").textContent = t5;
+
+          const t6 = document.getElementById("want").value;
+          document.getElementById("span6").textContent = t6;
+
+          let str = "";
+          const radio = document.form1.radio;
+
+            for (let i = 0; i < radio.length; i++) {
+                if (radio[i].checked) {//(color1[i].checked === true)と同じ
+                str = radio[i].value;
+            break;
+                }
+            }
+           document.getElementById("span7").textContent = str;
+     }
+        
+        
+      </script>
+
+      <div class="two">
+    <h1>シート</h1>
+    <p class="message">スクショして活用しよう</p>
+
+    <div class="card">
+        <div class="title" id="title">
+            <span id="span6"></span>
+        </div>
+
+       <div class="text">
+        名前：<span id="span1"></span>
+       </div>
+
+       <div class="text">
+        性別：<span id="span7"></span>
+       </div>
+
+       <div class="text">
+        年齢：<span id="span2"></span>歳
+       </div>
+
+       <div class="text">
+        関係人数：<span id="span3"></span>人
+       </div>
+
+       <div class="text">
+        相談内容：<span id="span4"></span>
+       </div>
+
+       <div class="text">
+        補足： <br><span id="span5"></span>
+       </div>
+
+      
+
+       <a href= "https://twitter.com/messages/compose?recipient_id=102806852&text=こんにちは。" class="send" >コレコレに送信（コピーしてから）</a>
+    </div>
+</div>
+  </div>
+  
+
+  <div class="double">
+<div class="one">
+    <h1>最後のステップ</h1>
+    <p class="message">パーフェクトな凸を目指そう</p>
+
+<div class="center1">
+    <div class="caution">
+        <p><span class="under">凸をする前の最終確認</span></p>
+
+        <ul>
+           <li>事前に配信を切っておくこと</li>
+           <li>通話では失礼な態度を取らない</li>
+           <li>ボイチェンを使わない</li>
+           <li>ヘラヘラ笑いながら喋らない</li>
+          
+        </ul>
+   </div>
+
+</div>
+</div>
+
+<div class="tw0">
+   <h1>このテンプレートを作った人</h1>
+   <p class="message">😷</p>
+
+
+   <div class="card">
+    <div class="window">
+    <img src="icon.png">
+    <p>ポム | Pom</p>
+
+
+    </div>
+
+   <ul class="UL1">
+    <li class="li1"> <a href="https://twitter.com/Mitarashimochi2"> <img src="twitter.png"></a></li>
+
+    <li class="li2"> <a href="https://www.youtube.com/channel/UCu6Uoruw8k1N67WCcL65u-Q"> <img src="tube.png"></a></li>
+   </ul>
+
+   <p class="sendme">要望、アドバイス、開発に協力してくれる方、などの問い合わせはTwitterのDMよりお願いします。</p>
+   <a href= "https://twitter.com/messages/compose?recipient_id=1261838378254741504" class="send" >DMを送る</a>
+   
+   </div>
+</div>
+
+</div>
+   <div class="fotter">
+
+    <p>2022 コレコレ相談チートシート</p>
+   </div>
+</body>
+
+
+</html>
